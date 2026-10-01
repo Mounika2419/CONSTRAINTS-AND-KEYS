@@ -1,0 +1,15 @@
+use aids;
+ create table dept(id int primary key,dname varchar(20));
+ desc dept;
+ insert into dept values(1,'cse');
+  insert into dept values(2,'aids');
+   insert into dept values(3,'aiml');
+   select *from dept;
+ create table courses(cid int primary key,cname varchar(20),credits int check(credits>0),unique(cname),id int,foreign key(id) references dept(id),status varchar(20));
+ desc courses;
+ insert into courses values(101,'python',3,1,'active');
+  insert into courses values(102,'mysql',5,2,'active');
+  insert into courses values(103,'java',4,2,'deactive');
+   insert into courses values(104,'cpp',2,3,'deactive');
+    insert into courses values(105,'ai',2,2,'active');
+select *from courses;
